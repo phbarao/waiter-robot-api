@@ -24,7 +24,7 @@ const io = new Server(server, {
     origin: [
       'http://localhost:3000',
       'http://localhost:3001',
-      'https://waiter-robot.netlify.app',
+      'https://waiter-robot-display.herokuapp.com',
     ],
     methods: ['GET', 'POST'],
   },
