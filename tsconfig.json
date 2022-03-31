@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "commonjs",
     "strict": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "rootDir": "src",
     "outDir": "build",
     "sourceMap": true,
@@ -15,7 +15,10 @@
     "importHelpers": true,
     "strictPropertyInitialization": false,
     "types": ["node"],
-    "typeRoots": ["node_modules/@types"]
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "tslib": ["path/to/node_modules/tslib/tslib.d.ts"]
+    }
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
