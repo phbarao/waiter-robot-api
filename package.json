@@ -8,7 +8,7 @@
     "dev:server": "ts-node-dev --ignore-watch node_modules src/index.ts",
     "start": "node build/index.ts",
     "build": "tsc",
-    "postinstall": "npm run build"
+    "postinstall": "yarn build"
   },
   "keywords": [],
   "author": "",
