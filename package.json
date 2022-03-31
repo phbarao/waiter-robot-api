@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev:server": "ts-node-dev --ignore-watch node_modules src/index.ts",
-    "start": "node build/index.js",
+    "start": "node build/index",
     "build": "tsc",
     "postinstall": "yarn build"
   },
