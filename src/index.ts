@@ -9,7 +9,6 @@ import Order from './models/Order';
 dotenv.config();
 
 const PORT = process.env.PORT || 3333;
-const connectionString = process.env.MONGO_URL;
 const app = express();
 
 app.use(express.json());
@@ -51,7 +50,7 @@ io.on('connection', (socket) => {
   });
 });
 
-mongoose.connect(connectionString as string);
+mongoose.connect(process.env.MONGO_URL as string);
 
 mongoose.connection.once('open', () => {
   console.log(`>>> MongoDB connection: OK`);
