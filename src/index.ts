@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import http from 'http';
 import cors from 'cors';
 import mongoose from 'mongoose';
@@ -13,6 +13,10 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+
+app.get('/', (request: Request, response: Response) => {
+  response.json({ ok: true });
+});
 
 const server = http.createServer(app);
 const io = new Server(server, {
